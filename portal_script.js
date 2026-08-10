@@ -216,7 +216,7 @@ function renderChaptersListOnly() {
     html += `
       <article class="chapter-card-edumate" onclick="launchChapter('${ch.id}', '${ch.path}', '${ch.fullTitle}')">
         <div class="chapter-img-wrap">
-          <img src="${ch.thumbnail}" alt="${ch.title}" class="chapter-img" onerror="this.src='https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=80'" />
+          <img src="${ch.thumbnail}" alt="${ch.title}" class="chapter-img" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=80'" />
           <span class="chapter-badge-tag">${ch.bsebNumber}</span>
         </div>
         
