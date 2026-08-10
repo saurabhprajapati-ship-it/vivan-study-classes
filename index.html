@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vivan Study Classes — Class 10 Bihar Board Portal</title>
+  <meta name="description" content="Official Smart-Class & Learning Portal for Bihar Board (BSEB Class 10). Sanskrit, Science, Mathematics, SST, and Hindi.">
+  <link rel="stylesheet" href="portal_style.css">
+</head>
+<body>
+
+  <!-- Sticky Top Header Bar -->
+  <div class="top">
+    <div class="top-in">
+      <div class="brand-wrap">
+        <img src="assets/institute_logo.png" alt="Vivan Study Classes Logo" class="brand-logo-img" />
+        <div class="brand">
+          <span>Vivan Study Classes</span>
+          <span class="brand-subtitle">Class 10 (BSEB Digital Portal)</span>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="header-teacher-badge">
+          <img src="assets/founder_teacher_avatar.jpg" alt="Vikash Sir" class="teacher-avatar" />
+          <span class="teacher-name">विकास सर</span>
+        </div>
+
+        <!-- Light / Dark Theme Toggle Button -->
+        <button class="toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-fg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="wrap">
+
+    <!-- Hero Showcase Card (Visible ONLY on Home / Subject Selection View) -->
+    <div class="hero-card" id="heroCard">
+      <div class="hero-body">
+        <span class="hero-badge">🌟 OFFICIAL BSEB SMART CLASSROOM 2026 🌟</span>
+        <h1 class="hero-title">स्मार्ट क्लासरूम डिजिटल लर्निंग पोर्टल</h1>
+        <p class="hero-subtitle-text">
+          100% बिहार बोर्ड (BSEB Class 10) पाठ्यक्रम पर आधारित। सभी 14 संस्कृत पाठों की उच्च-स्तरीय 3D presentation, MCQs, उत्तरीय प्रश्न तथा शब्दार्थ टूलटिप्स।
+        </p>
+
+        <div class="hero-stats-bar">
+          <div class="hero-stat-item">
+            <span class="hero-stat-val">14</span>
+            <span class="hero-stat-lbl">संस्कृत पाठ (Chapters)</span>
+          </div>
+          <div class="hero-stat-item">
+            <span class="hero-stat-val">443+</span>
+            <span class="hero-stat-lbl">MCQs (वस्तुनिष्ठ)</span>
+          </div>
+          <div class="hero-stat-item">
+            <span class="hero-stat-val">217+</span>
+            <span class="hero-stat-lbl">उत्तरीय प्रश्न</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-img-container">
+        <img src="assets/vsc_logo_transparent.png" alt="Vivan Study Emblem Logo" class="hero-img" />
+      </div>
+    </div>
+
+    <!-- Dynamic Viewport (Switches between Subjects Grid & Chapters Grid with Subject Search Bar) -->
+    <div id="mainContentWrap">
+      <!-- Generated dynamically by portal_script.js -->
+    </div>
+  </div>
+
+  <!-- Bottom Navigation Bar (2 Tabs Only) -->
+  <div class="bottom">
+    <div class="tabs">
+      <div class="tab active" onclick="showSubjectsView()" aria-label="Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span>Home</span>
+      </div>
+      
+      <div class="tab" onclick="showChaptersForSubject('sanskrit')" aria-label="Sanskrit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M4 6v12a2 2 0 0 0 2 2h12V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2z"/>
+          <path d="M8 9h8M8 13h6"/>
+        </svg>
+        <span>संस्कृत (14)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full Screen Presentation Viewer Modal -->
+  <div class="viewer-modal" id="viewerModal">
+    <div class="viewer-topbar">
+      <button class="back-to-hub-btn" onclick="closeViewer()">
+        ⬅ वापस जाएँ (Back to Classes Hub)
+      </button>
+      <span id="viewerTitle" style="font-weight: 800; font-size: 16px; color: var(--text);">Smart Class Viewport</span>
+      <span style="font-weight: 700; font-size: 13px; color: var(--accent);">Vivan Study Classes</span>
+    </div>
+    <iframe id="viewerIframe" class="viewer-iframe" src="about:blank"></iframe>
+  </div>
+
+  <script src="portal_script.js"></script>
+</body>
+</html>
